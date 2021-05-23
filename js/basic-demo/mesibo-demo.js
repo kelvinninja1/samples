@@ -1,10 +1,10 @@
 
 /* Refer following tutorial and API documentation to know how to create a user token
- * https://mesibo.com/documentation/tutorials/first-app/ 
+ * https://mesibo.com/documentation/tutorials/first-app/
  */
 var demo_user_token = 'xxxxxxxxxxxxxxxxxxxx';
 /* App ID used to create a user token. */
-var demo_appid = 'web';
+var demo_appid = '6854';
 /* A destination where this demo app will send message or make calls */
 var demo_destination = '18005551234';
 
@@ -21,8 +21,8 @@ DemoNotify.prototype.Mesibo_OnConnectionStatus = function(status, value) {
 		s.classList.replace("btn-danger", "btn-success");
 		s.innerText = "You are online";
 		return;
-	} 
-		
+	}
+
 	s.classList.replace("btn-success", "btn-danger");
 	switch(status) {
 		case MESIBO_STATUS_CONNECTING:
@@ -76,7 +76,7 @@ DemoNotify.prototype.Mesibo_OnCallStatus = function(callid, status) {
 	var v = document.getElementById("vcstatus");
 	var a = document.getElementById("acstatus");
 
-	var s = "Complete"; 
+	var s = "Complete";
 	if(status&MESIBO_CALLSTATUS_COMPLETE) {
 		console.log("closing");
 		$('#answerModal').modal("hide");
@@ -125,7 +125,7 @@ api.start();
 var message_index = 0;
 function sendMessage() {
 	var p = {};
-	p.peer = demo_destination;	
+	p.peer = demo_destination;
 	p.type = 0;
 	p.expiry = 3600*24;
 	p.flag = MESIBO_FLAG_DELIVERYRECEIPT|MESIBO_FLAG_READRECEIPT;
@@ -137,14 +137,14 @@ function sendMessage() {
 
 function sendFile() {
 	var p = {};
-	p.peer = demo_destination;	
+	p.peer = demo_destination;
 	p.type = 0;
 	p.expiry = 3600*24;
 	p.flag = MESIBO_FLAG_DELIVERYRECEIPT|MESIBO_FLAG_READRECEIPT;
-	
+
 	var msg = {}; //create a rich message
 	msg.type = 1;	// 2 for video, 3 audio, 10 other
-	msg.size = 1023;	
+	msg.size = 1023;
 	msg.url = 'https://cdn.pixabay.com/photo/2019/08/02/09/39/mugunghwa-4379251_1280.jpg'
 	msg.title = 'Himalaya';
 	msg.message = 'Hello from js';
@@ -153,11 +153,11 @@ function sendFile() {
 
 function sendReadReceipt() {
 	var p = {};
-	p.peer = demo_destination;	
+	p.peer = demo_destination;
 	p.type = 0;
 	p.expiry = 3600*24;
 
-	var rrid = 13453967264; //id of the message for which we are sending read-receipt 
+	var rrid = 13453967264; //id of the message for which we are sending read-receipt
 	api.sendReadReceipt(p, rrid);
 }
 
@@ -180,5 +180,3 @@ function hangup() {
 	$('#answerModal').modal("hide");
 	api.hangup(0);
 }
-
-

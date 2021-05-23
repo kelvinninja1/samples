@@ -43,7 +43,7 @@
  */
 
 const MESIBO_ACCESS_TOKEN = "xxxxxxxxx";
-const MESIBO_APP_ID = "xxxxx";
+const MESIBO_APP_ID = "6854";
 
 //If you are hosting Mesibo backend on your own server, change this accordingly.
 //Refer https://github.com/mesibo/messenger-app-backend

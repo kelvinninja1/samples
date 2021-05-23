@@ -42,12 +42,12 @@
  *
  */
 
-const MESIBO_ACCESS_TOKEN = "5f1e7ffb806d046aadf5587128d75fac0fa4daa86183a1ce5e4410cf72";
-const MESIBO_APP_ID = 'web';
+const MESIBO_ACCESS_TOKEN = "qnikxyfiepigw4cmgu2dfzh3pnom5dinqt4ebo22vzgeq3yzcw5itrotubvw4plf";
+const MESIBO_APP_ID = '6854';
 
 /* A destination where this demo app will send message  */
-const MESIBO_USER_DESTINATION = 'js_user';
-const MESIBO_DISPLAY_NAME = "Mesibo"
+const MESIBO_USER_DESTINATION = '+233557392027';
+const MESIBO_DISPLAY_NAME = "Morrison"
 const MESIBO_DISPLAY_PICTURE = "images/profile/default-profile-icon.jpg"
 
 
